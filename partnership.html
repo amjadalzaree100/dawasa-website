@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="الشراكة مع دواسة — حوّل محلك إلى محطة تأجير دراجات.">
+<title>الشراكة معنا | دواسة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header" id="site-header"></header>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>الشراكة معنا</h1>
+      <p>انضم إلى شبكة محطات دواسة واستفد من عمولة على كل عملية إيجار.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2" style="align-items:start">
+      <div>
+        <h2 class="section-title">لماذا تصبح محطة شريكة؟</h2>
+        <p style="color:var(--mut);line-height:1.85;margin-bottom:20px">نموذج الإيرادات: 25% لمحطة الاستلام، 25% لمحطة التسليم، 50% للمنصة. كلما زادت العمليات في محلك، زادت عمولتك.</p>
+        <div class="card" style="margin-bottom:12px"><h3>عمولة على كل إيجار</h3><p style="color:var(--mut);font-size:14px;margin-top:6px">سواء كانت محطتك نقطة استلام أو تسليم — تحصل على نسبتك.</p></div>
+        <div class="card" style="margin-bottom:12px"><h3>زيارات جديدة</h3><p style="color:var(--mut);font-size:14px;margin-top:6px">مستخدمون دواسة يزورون محلك بانتظام.</p></div>
+        <div class="card"><h3>دعم وتدريب</h3><p style="color:var(--mut);font-size:14px;margin-top:6px">نوفر حساب المحطة، التدريب، والدعم الفني.</p></div>
+      </div>
+      <div class="form-card">
+        <h2 style="font-size:1.25rem;margin-bottom:8px">نموذج طلب الشراكة</h2>
+        <p style="color:var(--mut);font-size:14px;margin-bottom:20px">عبّئ البيانات وسنراجع طلبك ونتواصل معك.</p>
+        <form id="partnershipForm">
+          <div class="field"><label for="shop">اسم المحل *</label><input id="shop" name="shop" required placeholder="محل ..."></div>
+          <div class="field"><label for="name">اسم المسؤول *</label><input id="name" name="name" required placeholder="الاسم الكامل"></div>
+          <div class="form-row">
+            <div class="field"><label for="phone">الهاتف *</label><input id="phone" name="phone" type="tel" required dir="ltr"></div>
+            <div class="field"><label for="email">البريد</label><input id="email" name="email" type="email" dir="ltr"></div>
+          </div>
+          <div class="field"><label for="address">عنوان المحل *</label><input id="address" name="address" required placeholder="المنطقة – الشارع"></div>
+          <div class="field"><label for="type">نوع النشاط *</label>
+            <select id="type" name="type" required>
+              <option value="">اختر...</option>
+              <option>محل تجاري</option>
+              <option>مقهى</option>
+              <option>محطة وقود</option>
+              <option>مركز خدمات</option>
+              <option>أخرى</option>
+            </select>
+          </div>
+          <div class="field"><label for="notes">ملاحظات إضافية</label><textarea id="notes" name="notes" placeholder="مساحة المحل، ساعات العمل، أي معلومات أخرى..."></textarea></div>
+          <button type="submit" class="btn" style="width:100%">إرسال الطلب عبر WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="js/main.js"></script>
+</body>
+</html>
