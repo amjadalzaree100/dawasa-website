@@ -26,11 +26,73 @@
       </div>
       <div class="hero-visual">
         <div class="map-frame">
-          <img src="assets/images/damascus-map.jpg"
-               alt="خريطة محطات دواسة في دمشق"
-               loading="eager"
-               decoding="async"
-               width="900" height="600">
+          <div class="map-canvas">
+            <img src="assets/images/damascus-map.jpg"
+                 alt="خريطة محطات دواسة في دمشق"
+                 loading="eager" decoding="async"
+                 width="900" height="600">
+
+            <svg class="map-overlay" viewBox="0 0 900 600"
+                 preserveAspectRatio="xMidYMid slice"
+                 aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="routeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#86efac"/>
+                  <stop offset="50%" stop-color="#22c55e"/>
+                  <stop offset="100%" stop-color="#15803d"/>
+                </linearGradient>
+              </defs>
+
+              <!-- مسار طبيعي: S واسع في النصف السفلي، لا يمر بمنتصف الصورة -->
+              <path id="heroRoute"
+                    d="M 198 180
+                       C 172 245, 178 325, 250 380
+                       C 322 435, 440 465, 550 450
+                       C 640 437, 690 385, 702 330"
+                    fill="none"/>
+
+              <!-- الخط المنقّط الثابت (خلفية) -->
+              <use href="#heroRoute" stroke="rgba(255,255,255,.9)"
+                   stroke-width="3" stroke-linecap="round"
+                   stroke-dasharray="4 9"/>
+
+              <!-- الخط المتدرّج الذي يُرسم -->
+              <use href="#heroRoute" class="route-draw"
+                   stroke="url(#routeGrad)"
+                   stroke-width="5" stroke-linecap="round"
+                   fill="none"/>
+
+              <!-- أيقونة الدراجة: تذهب وتعود ببطء -->
+              <g class="route-bike">
+                <circle r="11" fill="#ffffff" opacity="0.96"/>
+                <circle r="11" fill="none" stroke="#22c55e" stroke-width="1.8"/>
+                <g transform="translate(-6.5,-5.2) scale(0.65)">
+                  <circle cx="3.5" cy="9" r="4" fill="none"
+                          stroke="#15803d" stroke-width="2"/>
+                  <circle cx="16" cy="9" r="4" fill="none"
+                          stroke="#15803d" stroke-width="2"/>
+                  <path d="M3.5 9 L8 2.5 L14 2.5 L16 9 M8 2.5 L12 9"
+                        fill="none" stroke="#15803d" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+
+                <!-- ذهاب وإياب (22 ثانية) -->
+                <animateMotion dur="22s" repeatCount="indefinite" begin="3.6s"
+                               keyPoints="0;1;1;0;0"
+                               keyTimes="0;0.42;0.5;0.92;1"
+                               calcMode="linear">
+                  <mpath href="#heroRoute"/>
+                </animateMotion>
+              </g>
+            </svg>
+
+            <!-- نبضات المحطات -->
+            <span class="station-dot" style="top:30%; left:22%;" data-name="الجامعة"></span>
+            <span class="station-dot" style="top:25%; left:64%;" data-name="باب توما"></span>
+            <span class="station-dot" style="top:60%; left:40%;" data-name="المزة"></span>
+            <span class="station-dot" style="top:55%; left:78%;" data-name="الشعلان"></span>
+            <span class="station-dot" style="top:80%; left:55%;" data-name="المالكي"></span>
+          </div>
         </div>
       </div>
     </div>
