@@ -28,10 +28,20 @@
           class="container"
           style="text-align: center; max-width: 640px; margin-inline: auto"
         >
-          <div class="qr-box" id="downloadQr"></div>
-          <p style="color: var(--mut); margin-bottom: 32px">
-            امسح الرمز للوصول إلى التطبيق — أو استخدم الروابط أدناه للتحميل
-            المباشر
+          <!-- رمز QR الحقيقي -->
+          <div class="qr-image-wrap">
+            <img
+              src="assets/images/qrcode.png"
+              alt="رمز QR لتحميل تطبيق دواسة"
+              width="220"
+              height="220"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+
+          <p class="qr-caption">
+            امسح الرمز بكاميرا هاتفك — أو استخدم الأزرار أدناه للتحميل المباشر
           </p>
 
           <div class="store-btns">
@@ -68,8 +78,8 @@
               <circle cx="12" cy="12" r="10" />
               <path d="M12 16v-4M12 8h.01" />
             </svg>
-            <span>سيبدأ التحميل مباشرةً عند الضغط على أي من الزرّين  --    التطبيق تجريبي فقط .</span>
-          </div>  
+            <span>سيبدأ التحميل مباشرةً عند الضغط على أي من الزرّين — دون فتح الملف في المتصفح.</span>
+          </div>
         </div>
       </section>
     </main>
@@ -78,49 +88,7 @@
 
     <script>
       /* ============================================================
-         1) توليد رمز QR
-         ============================================================ */
-      (function () {
-        const m = [
-          [1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1],
-          [1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1],
-          [1,0,1,1,1,0,1,0,1,0,1,0,1,1,1,0,1],
-          [1,0,1,1,1,0,1,0,0,0,1,0,1,1,1,0,1],
-          [1,0,1,1,1,0,1,0,1,0,1,0,1,1,1,0,1],
-          [1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1],
-          [1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1],
-          [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-          [1,0,1,0,1,1,1,0,1,1,0,1,0,1,0,1,0],
-          [0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0,1],
-          [1,1,0,0,1,0,1,0,1,0,1,1,0,0,1,1,0],
-          [0,1,1,0,0,1,0,0,1,0,0,1,1,0,0,1,1],
-          [1,0,0,1,1,0,1,0,0,1,1,0,0,1,1,0,1],
-          [0,0,1,1,0,1,1,0,1,1,0,1,1,0,1,0,0],
-          [1,1,0,0,1,0,0,0,0,0,1,0,0,1,0,1,1],
-          [0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0],
-          [1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1],
-          [1,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,1],
-          [1,0,1,1,1,0,1,0,0,1,1,0,1,1,1,0,1],
-          [1,0,1,1,1,0,1,0,1,1,0,0,1,1,1,0,1],
-          [1,0,1,1,1,0,1,0,0,0,1,0,1,1,1,0,1],
-          [1,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,1],
-          [1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1]
-        ];
-        const N = 17;
-        let s = `<svg viewBox="0 0 ${N} ${N}" width="148" height="148">`;
-        for (let y = 0; y < N; y++) {
-          for (let x = 0; x < N; x++) {
-            if (m[y][x]) {
-              s += `<rect x="${x + 0.1}" y="${y + 0.1}" width="0.8" height="0.8" rx="0.15" fill="#0D2A1F"/>`;
-            }
-          }
-        }
-        s += "</svg>";
-        document.getElementById("downloadQr").innerHTML = s;
-      })();
-
-      /* ============================================================
-         2) إجبار التحميل (يتجاوز تجاهل المتصفح لـ download)
+         إجبار التحميل — لا يفتح الملف أبدًا في المتصفح
          ============================================================ */
       (function () {
         const FILE_NAME = "dawwasa-user-app.html";
@@ -132,17 +100,16 @@
             const url = link.getAttribute("href");
             const originalHTML = link.innerHTML;
 
-            // حالة "جارٍ التحميل"
             link.style.pointerEvents = "none";
-            link.style.opacity = "0.75";
+            link.style.opacity = "0.7";
 
             try {
               const response = await fetch(url, { cache: "no-store" });
-              if (!response.ok) throw new Error("fetch failed");
+              if (!response.ok) {
+                throw new Error("HTTP " + response.status);
+              }
 
               const blob = await response.blob();
-
-              // نجبر النوع ليكون تنزيلًا لا عرضًا
               const forcedBlob = new Blob([blob], {
                 type: "application/octet-stream"
               });
@@ -151,31 +118,29 @@
               const a = document.createElement("a");
               a.href = blobUrl;
               a.download = FILE_NAME;
-              a.style.display = "none";
-              document.body.appendChild(a);
-              a.click();
-
-              // تنظيف
-              setTimeout(function () {
-                URL.revokeObjectURL(blobUrl);
-                if (a.parentNode) a.parentNode.removeChild(a);
-              }, 1500);
-
-            } catch (err) {
-              // بديل احتياطي: افتح الرابط مباشرة
-              const a = document.createElement("a");
-              a.href = url;
-              a.download = FILE_NAME;
+              a.rel = "noopener";
               document.body.appendChild(a);
               a.click();
               document.body.removeChild(a);
+
+              setTimeout(function () {
+                URL.revokeObjectURL(blobUrl);
+              }, 2000);
+
+              link.querySelector("small").textContent = "✓ تم التحميل";
+            } catch (err) {
+              link.querySelector("small").textContent = "✗ فشل التحميل";
+              alert(
+                "تعذّر بدء التحميل.\n\n" +
+                "تأكد أنك تفتح الصفحة عبر سيرفر (localhost أو Vercel)، لا من ملف محلي."
+              );
+              console.error(err);
             } finally {
-              // أعد الزر لحالته بعد ثانيتين
               setTimeout(function () {
                 link.style.pointerEvents = "";
                 link.style.opacity = "";
                 link.innerHTML = originalHTML;
-              }, 2000);
+              }, 2500);
             }
           });
         });

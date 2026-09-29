@@ -624,6 +624,71 @@ main { padding-top: var(--header-h); min-height: calc(100vh - 320px); }
   .hero-grid, .price-hero, .grid-3, .grid-4, .steps, .stats-strip { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ============================================================
+   صورة QR — صفحة التحميل
+   ============================================================ */
+
+.qr-image-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto 20px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow:
+    0 20px 40px -20px rgba(6, 59, 42, 0.28),
+    0 8px 16px -8px rgba(6, 59, 42, 0.18),
+    inset 0 0 0 1px rgba(6, 59, 42, 0.06);
+  position: relative;
+}
+
+.qr-image-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 1.5px;
+  background: linear-gradient(145deg, #22c55e, #15803d);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.qr-image-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.qr-caption {
+  color: var(--mut);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 auto 32px;
+  max-width: 420px;
+}
+
+/* تعديلات الجوال */
+@media (max-width: 480px) {
+  .qr-image-wrap {
+    width: 220px;
+    height: 220px;
+    padding: 16px;
+    border-radius: 20px;
+  }
+  .qr-caption { font-size: 13px; margin-bottom: 26px; }
+}
+
 @media (max-width: 768px) {
   .section { padding: 64px 0; }
   .nav, .header-cta { display: none; }
