@@ -20,29 +20,439 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="how-it-works-section">
     <div class="container">
-      <div class="eyebrow"><span class="dot"></span>رحلة المستخدم</div>
-      <h2 class="section-title">17 خطوة بسيطة</h2>
-      <div class="steps" style="grid-template-columns:repeat(3,1fr);margin-top:32px">
-        <div class="step"><h3>إنشاء حساب</h3><p>سجّل برقم هاتفك وتحقق عبر OTP على WhatsApp.</p></div>
-        <div class="step"><h3>استعرض المحطات</h3><p>شاهد الخريطة والمحطات القريبة مع عدد الدراجات والمسافة.</p></div>
-        <div class="step"><h3>اختر محطة</h3><p>اطّلع على العنوان وساعات العمل وحالة المحطة.</p></div>
-        <div class="step"><h3>اختر دراجة</h3><p>من بين الدراجات المتاحة في المحطة المختارة.</p></div>
-        <div class="step"><h3>أنشئ طلب إيجار</h3><p>اضغط «استئجار» — تصبح الدراجة محجوزة لك.</p></div>
-        <div class="step"><h3>احصل على QR</h3><p>رمز واحد يُستخدم عند البدء وعند الإرجاع.</p></div>
-        <div class="step"><h3>3 دقائق للوصول</h3><p>توجّه إلى المحطة خلال مدة الحجز.</p></div>
-        <div class="step"><h3>امسح QR</h3><p>يعرض موظف المحطة الرمز ويراجع بيانات الطلب.</p></div>
-        <div class="step"><h3>تأكيد البدء</h3><p>المحطة تؤكد — يبدأ احتساب المدة والتكلفة.</p></div>
-        <div class="step"><h3>تابع رحلتك</h3><p>شاهد المدة والتكلفة الحالية في التطبيق.</p></div>
-        <div class="step"><h3>اختر محطة الإرجاع</h3><p>يمكنك الإرجاع إلى محطة مختلفة عن البداية.</p></div>
-        <div class="step"><h3>امسح QR مجددًا</h3><p>نفس الرمز عند محطة الإرجاع.</p></div>
-        <div class="step"><h3>تأكيد الإنهاء</h3><p>المحطة تؤكد — تُحسب التكلفة النهائية.</p></div>
-        <div class="step"><h3>ادفع نقدًا</h3><p>المبلغ للمحطة التي أنهيت عندها الإيجار.</p></div>
-        <div class="step"><h3>تأكيد الدفع</h3><p>المحطة تؤكد استلام المبلغ — تكتمل العملية.</p></div>
+      <div class="section-header">
+        <div class="eyebrow"><span class="dot"></span>رحلة المستخدم</div>
+        <h2>كيفية عمل النظام</h2>
+        <p class="section-subtitle">6 خطوات بسيطة لاستئجار دراجتك</p>
+      </div>
+
+      <div class="steps-timeline">
+        <!-- Step 1 -->
+        <div class="step-card step-1">
+          <div class="step-number">
+            <span class="number">01</span>
+          </div>
+          <div class="step-content">
+            <h3>ابحث عن محطة</h3>
+            <p>افتح التطبيق، استعرض المحطات القريبة، وتحقق من توفر الدراجات.</p>
+          </div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Arrow -->
+        <div class="step-arrow"></div>
+
+        <!-- Step 2 -->
+        <div class="step-card step-2">
+          <div class="step-number">
+            <span class="number">02</span>
+          </div>
+          <div class="step-content">
+            <h3>اختر الدراجة</h3>
+            <p>اختر دراجة متاحة وأنشئ طلب الإيجار. تصبح الدراجة محجوزة لك لثلاث دقائق.</p>
+          </div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="1"></circle>
+              <path d="M5 10a7 7 0 1 0 14 0"></path>
+              <path d="M12 5v7"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Arrow -->
+        <div class="step-arrow"></div>
+
+        <!-- Step 3 -->
+        <div class="step-card step-3">
+          <div class="step-number">
+            <span class="number">03</span>
+          </div>
+          <div class="step-content">
+            <h3>ابدأ عبر QR</h3>
+            <p>توجّه إلى المحطة خلال مدة الحجز، واعرض رمز QR للموظف. يبدأ الإيجار بعد تأكيد المحطة.</p>
+          </div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+              <rect x="17" y="17" width="4" height="4"></rect>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Arrow -->
+        <div class="step-arrow"></div>
+
+        <!-- Step 4 -->
+        <div class="step-card step-4">
+          <div class="step-number">
+            <span class="number">04</span>
+          </div>
+          <div class="step-content">
+            <h3>استمتع بالرحلة</h3>
+            <p>استخدم الدراجة بمسؤولية والتزم بقواعد المرور وحافظ على الدراجة.</p>
+          </div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Arrow -->
+        <div class="step-arrow"></div>
+
+        <!-- Step 5 -->
+        <div class="step-card step-5">
+          <div class="step-number">
+            <span class="number">05</span>
+          </div>
+          <div class="step-content">
+            <h3>أعدها إلى محطة</h3>
+            <p>يمكنك الإرجاع في محطة أخرى مفتوحة وغير ممتلئة. اعرض رمز الرحلة نفسه للموظف.</p>
+          </div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Arrow -->
+        <div class="step-arrow"></div>
+
+        <!-- Step 6 -->
+        <div class="step-card step-6">
+          <div class="step-number">
+            <span class="number">06</span>
+          </div>
+          <div class="step-content">
+            <h3>ادفع نقدًا</h3>
+            <p>تُحسب الأجرة حسب مدة الإيجار، وتُدفع نقدًا في محطة الإرجاع.</p>
+          </div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <style>
+    .how-it-works-section {
+      padding: 60px 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 20px 0 12px;
+      color: #1a1a1a;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #666;
+      margin: 0;
+    }
+
+    .steps-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .step-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 80px 1fr 60px;
+      gap: 30px;
+      align-items: start;
+      padding: 40px;
+      background: white;
+      border-radius: 12px;
+      border: 2px solid #e8e8e8;
+      transition: all 0.3s ease;
+      margin-bottom: 0;
+    }
+
+    .step-card:hover {
+      border-color: #007bff;
+      box-shadow: 0 10px 30px rgba(0, 123, 255, 0.1);
+    }
+
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .step-number .number {
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .step-content h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 0 0 12px;
+      color: #1a1a1a;
+    }
+
+    .step-content p {
+      margin: 0;
+      color: #666;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .step-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: #f0f4ff;
+      border-radius: 50%;
+      color: #007bff;
+      flex-shrink: 0;
+    }
+
+    .step-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .step-arrow {
+      height: 2px;
+      background: linear-gradient(90deg, #007bff 0%, transparent 100%);
+      margin: -1px 0;
+      position: relative;
+    }
+
+    .step-arrow::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 0 solid transparent;
+      border-top: 8px solid #007bff;
+    }
+
+    /* Tablet and Desktop - Horizontal Layout */
+    @media (min-width: 768px) {
+      .steps-timeline {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 0;
+        align-items: stretch;
+      }
+
+      .step-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        grid-column: span 1;
+        grid-row: span 2;
+        padding: 30px 20px;
+        gap: 20px;
+        margin-bottom: 0;
+      }
+
+      .step-card:nth-child(odd) {
+        padding-top: 60px;
+      }
+
+      .step-card:nth-child(even) {
+        padding-top: 0;
+      }
+
+      .step-number {
+        width: 70px;
+        height: 70px;
+      }
+
+      .step-number .number {
+        font-size: 1.5rem;
+      }
+
+      .step-content {
+        order: 1;
+      }
+
+      .step-content h3 {
+        font-size: 1.2rem;
+      }
+
+      .step-content p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+      }
+
+      .step-icon {
+        order: 2;
+        width: 50px;
+        height: 50px;
+      }
+
+      .step-icon svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .step-number {
+        order: 0;
+      }
+
+      .step-arrow {
+        grid-column: span 1;
+        grid-row: 1 / 3;
+        width: 2px;
+        height: 100%;
+        margin: 0;
+        background: linear-gradient(180deg, #007bff 0%, transparent 100%);
+      }
+
+      .step-arrow::after {
+        bottom: -8px;
+        right: -8px;
+        border-left: 8px solid transparent;
+        border-top: 8px solid #007bff;
+      }
+
+      .step-card:last-child .step-arrow {
+        display: none;
+      }
+    }
+
+    /* Desktop - Large Screen */
+    @media (min-width: 1200px) {
+      .section-header h2 {
+        font-size: 3rem;
+      }
+
+      .step-card {
+        padding: 35px 25px;
+      }
+
+      .step-number {
+        width: 80px;
+        height: 80px;
+      }
+
+      .step-number .number {
+        font-size: 1.8rem;
+      }
+
+      .step-content h3 {
+        font-size: 1.25rem;
+      }
+
+      .step-icon {
+        width: 60px;
+        height: 60px;
+      }
+
+      .step-icon svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    /* Mobile - Vertical Layout (under 768px) */
+    @media (max-width: 767px) {
+      .how-it-works-section {
+        padding: 40px 0;
+      }
+
+      .section-header h2 {
+        font-size: 1.8rem;
+      }
+
+      .section-header {
+        margin-bottom: 40px;
+      }
+
+      .step-card {
+        grid-template-columns: 70px 1fr;
+        gap: 20px;
+        padding: 25px;
+        margin-bottom: 15px;
+      }
+
+      .step-number {
+        width: 70px;
+        height: 70px;
+      }
+
+      .step-number .number {
+        font-size: 1.4rem;
+      }
+
+      .step-icon {
+        display: none;
+      }
+
+      .step-content h3 {
+        font-size: 1.1rem;
+      }
+
+      .step-content p {
+        font-size: 0.9rem;
+      }
+
+      .step-arrow {
+        height: 15px;
+        background: linear-gradient(180deg, #007bff 0%, transparent 100%);
+        margin: 0;
+      }
+
+      .step-arrow::after {
+        bottom: -8px;
+        right: 50%;
+        transform: translateX(50%);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #007bff;
+      }
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  </style>
 
   <section class="section" style="background:var(--g50)">
     <div class="container grid-2">
