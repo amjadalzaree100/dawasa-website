@@ -13,24 +13,76 @@
 <body>
 <header class="site-header" id="site-header"></header>
 <main>
-  <section class="page-hero">
-    <div class="container">
-      <h1>الأسئلة الشائعة</h1>
-      <p>إجابات سريعة عن أكثر ما يُسأل عن خدمة دواسة.</p>
+  <section class="page-hero faq-hero">
+    <div class="container faq-hero-content">
+      <div class="faq-hero-copy">
+        <span class="faq-hero-label"><span></span>مركز المساعدة</span>
+        <h1>أسئلتك، <em>وإجاباتها</em></h1>
+        <p>كل ما تحتاج معرفته عن الحجز، الأسعار، واستخدام دراجات دواسة — في مكان واحد.</p>
+        <a class="faq-hero-link" href="#faq-questions">استعرض الأسئلة <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="faq-hero-art" aria-hidden="true">
+        <span class="faq-hero-orbit"></span>
+        <span class="faq-hero-mark">؟</span>
+        <span class="faq-hero-spark faq-hero-spark-one"></span>
+        <span class="faq-hero-spark faq-hero-spark-two"></span>
+      </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container faq-list">
-      <div class="faq-item"><button class="faq-q">كيف أسجل في دواسة؟<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><div class="faq-a-inner">حمّل التطبيق، أدخل بياناتك (الاسم، الهاتف، البريد، كلمة المرور، وبيانات إضافية)، ثم تحقق من رقم هاتفك عبر OTP على WhatsApp. بعد التحقق يصبح حسابك فعالًا مباشرة.</div></div></div>
-      <div class="faq-item"><button class="faq-q">كيف أحجز دراجة؟<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><div class="faq-a-inner">افتح التطبيق، اختر محطة قريبة، شاهد الدراجات المتاحة، اختر دراجة واضغط «استئجار». ستحصل على QR — لديك 3 دقائق للوصول إلى المحطة.</div></div></div>
-      <div class="faq-item"><button class="faq-q">كم مدة الحجز؟<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><div class="faq-a-inner">3 دقائق فقط. يجب الوصول إلى المحطة وإتمام بدء الإيجار خلال هذه المدة. إذا انتهت المدة دون البدء، يُلغى الحجز تلقائيًا دون غرامة.</div></div></div>
-      <div class="faq-item"><button class="faq-q">ماذا يحدث إذا انتهت مدة الحجز؟<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><div class="faq-a-inner">يصبح الطلب منتهيًا والدراجة متاحة مجددًا. QR يصبح غير صالح. يمكنك إنشاء طلب جديد — لا توجد غرامة.</div></div></div>
-      <div class="faq-item"><button class="faq-q">هل يمكن إلغاء الحجز؟<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><div class="faq-a-inner">نعم، قبل بدء الإيجار من التطبيق. لا توجد غرامة على الإلغاء.</div></div></div>
-      <div class="faq-item"><button class="faq-q">هل يمكن إرجاع الدراجة في محطة مختلفة؟<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><div class="faq-a-inner">نعم — هذه ميزة أساسية. ابدأ من محطة وأعد الدراجة إلى أي محطة مفتوحة وليست ممتلئة.</div></div></div>
-      <div class="faq-item"><button class="faq-q">كيف يتم حساب السعر؟<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><div class="faq-a-inner">60 ل.س للساعة الأولى (حتى 59 دقيقة)، ثم 25 ل.س لكل ساعة إضافية أو جزء منها. مثال: ساعة و20 دقيقة = 85 ل.س.</div></div></div>
-      <div class="faq-item"><button class="faq-q">كيف أدفع؟<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><div class="faq-a-inner">الدفع نقدًا للمحطة التي أنهيت عندها الإيجار. بعد الدفع، يؤكد موظف المحطة استلام المبلغ في النظام.</div></div></div>
-      <div class="faq-item"><button class="faq-q">ماذا أفعل إذا واجهت مشكلة؟<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a"><div class="faq-a-inner">تواصل معنا عبر <a href="contact.html">صفحة التواصل</a> أو WhatsApp على +963 991 844 960. يمكنك أيضًا مراجعة موظف المحطة عند وجودك هناك.</div></div></div>
+  <section class="section faq-section" id="faq-questions">
+    <div class="container">
+      <div class="faq-heading">
+        <span class="eyebrow"><span class="dot"></span>إجابات واضحة وبسيطة</span>
+        <h2 class="section-title">كيف نقدر نساعدك؟</h2>
+        <p class="section-sub">تصفّح الأسئلة الأكثر شيوعًا، واضغط على أي سؤال لعرض إجابته.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" id="faq-question-1" type="button" aria-expanded="false" aria-controls="faq-answer-1"><span class="faq-number">01</span><span class="faq-question-text">كيف أسجل في دواسة؟</span><span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a" id="faq-answer-1" role="region" aria-labelledby="faq-question-1"><div class="faq-a-inner">حمّل التطبيق، أدخل بياناتك (الاسم، الهاتف، البريد، كلمة المرور، وبيانات إضافية)، ثم تحقق من رقم هاتفك عبر OTP على WhatsApp. بعد التحقق يصبح حسابك فعالًا مباشرة.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" id="faq-question-2" type="button" aria-expanded="false" aria-controls="faq-answer-2"><span class="faq-number">02</span><span class="faq-question-text">كيف أحجز دراجة؟</span><span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a" id="faq-answer-2" role="region" aria-labelledby="faq-question-2"><div class="faq-a-inner">افتح التطبيق، اختر محطة قريبة، شاهد الدراجات المتاحة، اختر دراجة واضغط «استئجار». ستحصل على QR — لديك 3 دقائق للوصول إلى المحطة.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" id="faq-question-3" type="button" aria-expanded="false" aria-controls="faq-answer-3"><span class="faq-number">03</span><span class="faq-question-text">كم مدة الحجز؟</span><span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a" id="faq-answer-3" role="region" aria-labelledby="faq-question-3"><div class="faq-a-inner">3 دقائق فقط. يجب الوصول إلى المحطة وإتمام بدء الإيجار خلال هذه المدة. إذا انتهت المدة دون البدء، يُلغى الحجز تلقائيًا دون غرامة.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" id="faq-question-4" type="button" aria-expanded="false" aria-controls="faq-answer-4"><span class="faq-number">04</span><span class="faq-question-text">ماذا يحدث إذا انتهت مدة الحجز؟</span><span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a" id="faq-answer-4" role="region" aria-labelledby="faq-question-4"><div class="faq-a-inner">يصبح الطلب منتهيًا والدراجة متاحة مجددًا. QR يصبح غير صالح. يمكنك إنشاء طلب جديد — لا توجد غرامة.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" id="faq-question-5" type="button" aria-expanded="false" aria-controls="faq-answer-5"><span class="faq-number">05</span><span class="faq-question-text">هل يمكن إلغاء الحجز؟</span><span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a" id="faq-answer-5" role="region" aria-labelledby="faq-question-5"><div class="faq-a-inner">نعم، قبل بدء الإيجار من التطبيق. لا توجد غرامة على الإلغاء.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" id="faq-question-6" type="button" aria-expanded="false" aria-controls="faq-answer-6"><span class="faq-number">06</span><span class="faq-question-text">هل يمكن إرجاع الدراجة في محطة مختلفة؟</span><span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a" id="faq-answer-6" role="region" aria-labelledby="faq-question-6"><div class="faq-a-inner">نعم — هذه ميزة أساسية. ابدأ من محطة وأعد الدراجة إلى أي محطة مفتوحة وليست ممتلئة.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" id="faq-question-7" type="button" aria-expanded="false" aria-controls="faq-answer-7"><span class="faq-number">07</span><span class="faq-question-text">كيف يتم حساب السعر؟</span><span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a" id="faq-answer-7" role="region" aria-labelledby="faq-question-7"><div class="faq-a-inner">60 ل.س للساعة الأولى (حتى 59 دقيقة)، ثم 25 ل.س لكل ساعة إضافية أو جزء منها. مثال: ساعة و20 دقيقة = 85 ل.س.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" id="faq-question-8" type="button" aria-expanded="false" aria-controls="faq-answer-8"><span class="faq-number">08</span><span class="faq-question-text">كيف أدفع؟</span><span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a" id="faq-answer-8" role="region" aria-labelledby="faq-question-8"><div class="faq-a-inner">الدفع نقدًا للمحطة التي أنهيت عندها الإيجار. بعد الدفع، يؤكد موظف المحطة استلام المبلغ في النظام.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" id="faq-question-9" type="button" aria-expanded="false" aria-controls="faq-answer-9"><span class="faq-number">09</span><span class="faq-question-text">ماذا أفعل إذا واجهت مشكلة؟</span><span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a" id="faq-answer-9" role="region" aria-labelledby="faq-question-9"><div class="faq-a-inner">تواصل معنا عبر <a href="contact.html">صفحة التواصل</a> أو WhatsApp على +963 991 844 960. يمكنك أيضًا مراجعة موظف المحطة عند وجودك هناك.</div></div>
+        </div>
+      </div>
+      <div class="faq-contact">
+        <div class="faq-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg></div>
+        <div class="faq-contact-copy">
+          <h2>ما لقيت إجابتك؟</h2>
+          <p>فريقنا جاهز لمساعدتك والإجابة عن أي استفسار.</p>
+        </div>
+        <a class="btn faq-contact-button" href="contact.html">تواصل معنا <span aria-hidden="true">←</span></a>
+      </div>
     </div>
   </section>
 </main>
